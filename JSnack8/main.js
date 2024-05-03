@@ -1,25 +1,23 @@
 'use strict'
 
-const numberLong = 3;
-
-//let userNumber = Number(prompt("Inserire un numero a 4 cifre"));
-
-//let userNumberList = [];
-
 function NumberBetter() {
-    let userNumber = Number(prompt("Inserire un numero a 4 cifre"));
+    let userNumber = prompt("Inserire un numero a 4 cifre");
 
-    let userNumberList = [];
+    const numberLong = 4;
 
-    for (
-        let i = 0, len = userNumber.length;
-        i < len;
-        i += 1
-    ) {
-        userNumberList.push(+userNumber.charAt(i));
+    if(userNumber.length == numberLong) {
+    
+        let sum = 0;
+
+        for (let i = 0, len = userNumber.length; i < len; i += 1) {
+            
+            sum += Number(userNumber.charAt(i));
+        }
+        console.log(sum);
+
+    } else {
+        console.log('Non penso proprio');
     }
-
-    console.log(userNumberList);
 }
 
 NumberBetter();
